@@ -1,0 +1,89 @@
+.bg-circles {
+  background: radial-gradient(circle at 0% 20%, rgba(248, 250, 252, 0) 10rem, rgba(248, 250, 252, 0.2) 11rem, rgba(226, 232, 240, 0.3) 12rem, rgba(226, 232, 240, 0) 13.5rem), radial-gradient(circle at 102% 40%, rgba(248, 250, 252, 0) 13rem, rgba(248, 250, 252, 0.2) 13.5rem, rgba(226, 232, 240, 0.3) 14rem, rgba(226, 232, 240, 0) 14.5rem), url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+.bg-grain {
+  background: url("https://grainy-gradients.vercel.app/noise.svg");
+}
+
+.h-inside {
+  height: calc(100vw / 3 - 1.5rem);
+}
+
+.animate-round {
+  animation: spin 5s ease-in-out infinite;
+}
+
+.animate-menu {
+  animation: slide-bottom 0.3s ease-out both;
+}
+
+@media (min-width: 640px) {
+  .animate-menu {
+    animation: fade-in 0.5s ease-out both;
+  }
+
+  .animate-lang {
+    animation: slide-top 0.3s ease-out both;
+  }
+  .animate-lang:nth-child(1) {
+    animation-delay: 0.07s;
+  }
+  .animate-lang:nth-child(2) {
+    animation-delay: 0.14s;
+  }
+  .animate-lang:nth-child(3) {
+    animation-delay: 0.21s;
+  }
+  .animate-lang:nth-child(4) {
+    animation-delay: 0.28s;
+  }
+
+  .h-inside {
+    height: calc(100vw / 6 - 1.5rem);
+  }
+}
+@media (min-width: 768px) {
+  .h-inside {
+    height: calc(100vw / 6 - 3rem);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(12deg);
+  }
+  50% {
+    transform: rotate(-22deg);
+  }
+  100% {
+    transform: rotate(12deg);
+  }
+}
